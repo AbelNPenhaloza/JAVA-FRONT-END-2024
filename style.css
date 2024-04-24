@@ -53,108 +53,120 @@ main{
   }
 
 /* --------------- */
+
 .peliculas-box{
-    background-color:#000;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap:60px;
-    a{
-        text-decoration: none;
-        color: #ffffff;
-        
-        .pelicula{
-            width:200px;
-            height: 300px;
-            position: relative;
-            overflow: hidden;
-            border-radius: 10px;
-            transition: all 0.5s ease;
-           
-            .imgTendencia{
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                border-radius: 10px;
-               
-            }
-          
-            .tituloPelicula{
-                z-index: 2;
-                position: absolute;
-                text-align: center;
-                top: 50%;
-                left: 50%;
-                max-width: 20rem;
-                width: 100%;
-                transform: translateY(-50%) translateX(-50%);
-                h4 {
-                    font-size: 1.6rem;
-                    font-weight: bold;
-                    opacity: 0;
-                    margin-bottom: 0.5rem;
-                    letter-spacing: 0.1rem;
-                    transition: opacity 0.5s ease-in-out;
-
-                }
-            }
-
-            &:hover{
-               box-shadow: 0 0 30px #9f3648cd;
-               transform: scale(0.9);
-              
-            }
-
-            &:hover .tituloPelicula{
-                width: 100%;
-                height: 100%;
-                backdrop-filter: blur(20px);
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-
-            &:hover h4 {
-                width: 100%;
-                padding: 0.5rem;
-                opacity: 1;
-            }
-         
-        }
-    }
-  
 }
+.peliculas{
+    display: flex;
+    justify-content: center;
+    gap:60px;
+}
+
+
+.pelicula{
+    width:200px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+}
+.pelicula:hover{
+    box-shadow: 0 0 50px 10px #198754;;
+    transform: scale(0.9);
+ }
+
+.pelicula >.imgTendencia{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+   
+}
+
+.tituloPelicula{
+    z-index: 2;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    max-width: 20rem;
+    width: 100%;
+    transform: translateY(-50%) translateX(-50%);
+    color: white;
+    
+}
+.tituloPelicula:hover{
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, rgba(6,6,6,0.9529061624649859) 0%, rgba(6,6,6,0.7988445378151261) 100%);
+}
+
+.tituloPelicula > h4 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    opacity: 0;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.1rem;
+    transition: opacity 0.5s ease-in-out;
+
+}
+
+.tituloPelicula > h4:hover {
+    width: 100%;
+    padding: 0.5rem;
+    opacity: 1;
+}
+
+
+
+
+
 
 
 /* ------------------- */
 footer{
     padding: 2rem 0;
-  
+}
 
-    ul{
+footer>nav>ul{
         margin: 0;
         font-size: 0.75rem;
     }
    
-    li{
+footer >nav>ul> li{
         list-style: none;
     }
-    a{
+    
+li> a{
         color: #ffffff;
         text-decoration: none;
-    }
+}
     
 
 
-    .flechaArriba{
+.flechaArriba{
         position: fixed;
         bottom: 30px;
         right: 30px;
         cursor: pointer;
         color: #ffffff;
-    }
-        
 }
+        
+
+
+
+
+
+
 
 
 
